@@ -116,8 +116,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-    opacity: 0.9;
-    transition: 0.4s;
+    flex-shrink: 0; /* IMPORTANT: prevents shrinking */
 }
 
 .book-side img {
@@ -126,12 +125,7 @@ body {
     object-fit: cover;
 }
 
-.book-side:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-/* CENTER HERO */
+/* CENTER CONTENT */
 .hero-center {
     max-width: 420px;
     text-align: center;

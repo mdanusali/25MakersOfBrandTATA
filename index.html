@@ -126,6 +126,96 @@ body {
         flex-direction: column;
     }
 }
+
+@media (max-width: 768px) {
+
+    /* App container feel */
+    body {
+        background: #0a1626;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Sticky Header (App Bar) */
+    .app-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(10,22,38,0.85);
+        backdrop-filter: blur(12px);
+        padding: 12px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1em;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Hero tighter */
+    .book-layout {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 12px;
+    }
+
+    .book-side {
+        width: 140px;
+        height: 210px;
+    }
+
+    /* Title scaling */
+    h1 {
+        font-size: 1.8em !important;
+    }
+
+    /* Cards like app panels */
+    .card {
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 16px;
+    }
+
+    /* Profile stacked */
+    .profile {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Bottom sticky CTA */
+    .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(10,22,38,0.95);
+        backdrop-filter: blur(12px);
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .sticky-cta a {
+        flex: 1;
+        margin: 5px;
+        padding: 12px;
+        background: #fff;
+        color: #1f3a5f;
+        text-align: center;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    /* Add bottom spacing so content not hidden */
+    body {
+        padding-bottom: 80px;
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -151,7 +241,9 @@ body {
 }
 </script>
 </head>
-
+<div class="app-header">
+    📘 25 Makers of Brand TATA
+</div>
 <body>
 
 <!-- HERO BOOK LAYOUT -->
@@ -272,6 +364,10 @@ i=(i+1)%slides.length;
 slides[i].classList.add("active");
 },4000);
 </script>
-
+<div class="sticky-cta">
+    <a href="https://www.amazon.in/dp/9376319451">Amazon</a>
+    <a href="https://www.flipkart.com/product/p/itme?pid=9789376319459">Flipkart</a>
+    <a class="btn" href="https://store.whitefalconpublishing.com/products/25-makers-of-brand-tata-the-visionaries-and-builders-behind-india-s-most-trusted-brand">Publisher</a>
+</div>
 </body>
 </html>

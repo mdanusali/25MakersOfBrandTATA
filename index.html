@@ -224,6 +224,20 @@ body {
 .app-header {
     display: none;
 }
+.band {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .band {
+        height: 180px;
+    }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -253,7 +267,11 @@ body {
     📘 25 Makers of Brand TATA
 </div>
 <body>
-
+<div class="band" style="background-image:url('BAND.png'); display:flex; align-items:center; justify-content:center;">
+    <h2 style="color:white; font-family:'Playfair Display', serif;">
+        Built by People 🤲
+    </h2>
+</div>
 <!-- HERO BOOK LAYOUT -->
 <div class="book-layout">
 
